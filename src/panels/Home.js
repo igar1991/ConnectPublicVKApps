@@ -8,7 +8,7 @@ import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 
-const Home = ({ id, go, fetchedUser }) => (
+const Home = ({ id, connestPublic, fetchedUser }) => (
 	<Panel id={id}>
 		<PanelHeader>Анонимный чат</PanelHeader>
 		{fetchedUser &&
@@ -23,7 +23,7 @@ const Home = ({ id, go, fetchedUser }) => (
 
 		<Group title="Подключи нашего бота в свое сообщество">
 			<Div>
-				<Button size="xl" level="2" onClick={go} data-to="persik">
+				<Button size="xl" level="2" onClick={connestPublic} data-to="persik">
 					Подключить
 				</Button>
 			</Div>

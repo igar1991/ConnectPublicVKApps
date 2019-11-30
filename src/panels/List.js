@@ -11,7 +11,7 @@ const osName = platform();
 
 const Persik = props => {
 	let arr = props.selectedgroup;
-	console.log(props.selectedgroup[0])
+	console.log(props.selectedgroup)
 
 	return (
 	<Panel id={props.id}>
@@ -20,7 +20,7 @@ const Persik = props => {
 				{osName === IOS ? <Icon28ChevronBack/> : <Icon24Back/>}
 			</HeaderButton>}
 		>
-			Persik111
+			Ваши сообщества
 		</PanelHeader>
 		
 	</Panel>

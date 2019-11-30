@@ -5,7 +5,7 @@ import ScreenSpinner from '@vkontakte/vkui/dist/components/ScreenSpinner/ScreenS
 import '@vkontakte/vkui/dist/vkui.css';
 
 import Home from './panels/Home';
-import Persik from './panels/Persik';
+import Persik from './panels/List';
 
 const App = () => {
 	const [activePanel, setActivePanel] = useState('home');
@@ -72,8 +72,13 @@ const App = () => {
 
 
 	}, []);
-
 	const go = e => {
+		console.log("gogogo")
+		setActivePanel(e.currentTarget.dataset.to);
+
+	}
+
+	const connestPublic = e => {
 		setActivePanel(e.currentTarget.dataset.to);
 		connect.sendPromise("VKWebAppCallAPIMethod", {
 			"method": "groups.get",
@@ -89,7 +94,7 @@ const App = () => {
 
 	return (
 		<View activePanel={activePanel} popout={popout}>
-			<Home id='home' fetchedUser={fetchedUser} go={go}  />
+			<Home id='home' fetchedUser={fetchedUser} connestPublic={connestPublic}  />
 			<Persik id='persik' go={go} selectedgroup={selectedgroup} />
 			
 		</View>
