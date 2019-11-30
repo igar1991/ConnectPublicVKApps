@@ -20,7 +20,7 @@ const Persik = props => {
 				{osName === IOS ? <Icon28ChevronBack/> : <Icon24Back/>}
 			</HeaderButton>}
 		>
-			Persik
+			Persik111
 		</PanelHeader>
 		
 	</Panel>
